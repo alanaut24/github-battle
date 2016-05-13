@@ -1,2 +1,21 @@
-var app = document.getElementByID('app');
-app.innerHtml = "Hello!"
+/*
+  Components should be:
+    Focused
+    Independent
+    Reusable
+    Small
+    Testable
+*/
+
+var React = require('react');
+var ReactDOM = require('react-dom');
+
+var Hello = React.createClass({
+  render: function () {
+    return (
+      <div>Hello ReactJS Program!</div>
+    )
+  }
+});
+
+ReactDOM.render(<Hello />, document.getElementById('app'));
