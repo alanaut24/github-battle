@@ -7,13 +7,16 @@ var IndexRoute = ReactRouter.IndexRoute;
 var Main = require('../components/Main');
 var Home = require("../components/Home");
 var PromptContainer = require('../containers/PromptContainer');
+var ConfirmBattleContainer = require('../containers/ConfirmBattleContainer');
+
 
 var routes = (
   <Router history={hashHistory}>
     <Route path='/' component={Main}>
       <IndexRoute component={Home} />
-      <Route path='teamAway' header='Away' component={PromptContainer} />
-      <Route path='teamHome/:teamAway' header='Home' component={PromptContainer} />
+      <Route path='teamAway' header='Away Team' component={PromptContainer} />
+      <Route path='teamHome/:teamAway' header='Home Team' component={PromptContainer} />
+      <Route path='battle' component={ConfirmBattleContainer} />
     </Route>
   </Router>
 );
